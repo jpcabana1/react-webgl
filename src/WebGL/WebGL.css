@@ -1,0 +1,14 @@
+.canvasGl {
+  width: 65rem;
+  height: 35rem;
+  border: 1px solid black;
+}
+
+.divCanvas {
+  margin-top: 5rem;
+  width: 80rem;
+  height: 40rem;
+  border-style: double;
+  display: grid;
+  place-items: center;
+}
