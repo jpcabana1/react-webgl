@@ -1,5 +1,14 @@
 import GLC from "../GLCommander/GLCommander";
 
+let r = 0;
+const render = () => {
+  if (r < 1) {
+    r += 0.001;
+    GLC.clear(r, 0.0, 0.0, 1.0);
+    window.requestAnimationFrame(render);
+  }
+};
+
 export const init = (id) => {
   console.log(id);
 
@@ -18,5 +27,5 @@ export const init = (id) => {
 
   GLC.init(gl);
   GLC.clear(gl);
-  GLC.clear(1.0, 0.0, 0.0, 1.0);
+  window.requestAnimationFrame(render);
 };
